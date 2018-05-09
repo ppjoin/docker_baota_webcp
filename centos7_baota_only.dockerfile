@@ -7,7 +7,7 @@ RUN python /www/server/panel/tools.pyc panel admin123456
 # RUN /bin/bash /www/server/panel/install/install_soft.sh 1 install php 5.4
 # RUN /bin/bash /www/server/panel/install/install_soft.sh 1 install phpmyadmin 4.4
 # VOLUME ["/www"]
-COPY startapp.sh /start.sh
+COPY start_centos7.sh /start.sh
 RUN chmod +x /start.sh
 ENTRYPOINT ["/start.sh"]
-EXPOSE 888 80 443 21
+EXPOSE 8888 888 80 443 21
